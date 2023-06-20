@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Vidly.Models.Customer>
+
+<h2>Customers</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Customer</th>
+        </tr>
+    </thead>
+
+    @foreach (var customer in Model)
+    {
+        <tbody>
+            <tr>
+                <td>
+                    @Html.ActionLink(customer.Name, "Details", new { id = customer.ID })
+                </td>
+            </tr>
+        </tbody>
+
+    }
+</table>
